@@ -1,17 +1,32 @@
-# Codingly.io: Base Serverless Framework Template
+Navigate the below end points for exploring:
+1) BULK INSERT FROM BACK END TRIGGERED BY GET REQUEST
+Endpoint:
+https://9s55odp8p9.execute-api.us-east-1.amazonaws.com/dev/bmicalculator
 
-https://codingly.io
+HTTP Verb: GET
 
-## What's included
-* Folder structure used consistently across our projects.
-* [serverless-pseudo-parameters plugin](https://www.npmjs.com/package/serverless-pseudo-parameters): Allows you to take advantage of CloudFormation Pseudo Parameters.
-* [serverless-bundle plugin](https://www.npmjs.com/package/serverless-pseudo-parameters): Bundler based on the serverless-webpack plugin - requires zero configuration and fully compatible with ES6/ES7 features.
+Query Params: NONE
 
-## Getting started
-```
-sls create --name YOUR_PROJECT_NAME --template-url https://github.com/codingly-io/sls-base
-cd YOUR_PROJECT_NAME
-npm install
-```
+2) CALCULATE & INSERT BMI IN DB
+Endpoint:
+https://9s55odp8p9.execute-api.us-east-1.amazonaws.com/dev/bmi
 
-You are ready to go!
+HTTP Verb: POST
+
+Body: JSON
+{
+    "bmidata": 
+    [
+        {
+            "Gender": "Male",
+            "HeightCm": 171,
+            "WeightKg": 196
+        },
+        {
+            "Gender": "FeMale",
+            "HeightCm": 171,
+            "WeightKg": 196
+        }
+    ]
+}
+
